@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DED | Proftaak - Styled Music Player V2</title>
+		<link rel="stylesheet" href="assets/css/styleStyledMusic.css"> 
+		<link rel="shortcut icon" type="image/png" href="../../../assets/img/webfavicon.ico"/>
+	</head>
+
+	<body onLoad="initializeOnLoad()">
+		<div class="flex-container">
+			<h1>YASGUR - Here It's Always Like That</h1>
+			<break></break>
+			<div class="circle" onClick="audioPlayer()">
+				<button class="button" id="play" onClick="audioPlayer()">
+					<audio id="audio" src="assets/music/YASGUR - Here It's Always Like That.mp3" ></audio>
+				</button>
+			</div>
+			<break></break>
+			<div class="flex-div">
+				<img src="assets/img/volume.png" alt="volume" class="audio-img"/>
+				<break></break>
+				<img src="assets/img/hourglass.png" alt="hourglass" class="audio-img"/>
+			</div>
+			<div>
+				<input id="vol-control" type="range" min="0" max="100" step="1" onInput="setVolume(this.value)" onChange="setVolume(this.value)" value="100"/>
+				<input id="slider" type="range" min="0" max="100" step="0.1" value="0" onChange="setTime(this.value)" onInput="setTime(this.value)"/>
+			</div>
+		</div>
+		
+	  
+	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="assets/javascripts/audioPlayer.js"></script>
+	</body>
+</html>
